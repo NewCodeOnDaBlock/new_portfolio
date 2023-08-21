@@ -1,0 +1,27 @@
+button {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 400;
+  box-shadow: 1px 1px 50px rgb(182, 182, 182);
+  margin: 10px;
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  color: white;
+  transition: all 1.3s ease-in-out;
+  &:hover{
+    cursor: pointer;
+    transition: all 1.3s ease-in-out;
+    background: #d075fb;
+  }
+}
+
+.about-confetti{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: -3;
+  bottom:25%;
+  left: 40%;
+}
