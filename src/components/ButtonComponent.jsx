@@ -2,22 +2,21 @@ import {React, useState} from 'react'
 import Lottie from "lottie-react";
 import Confetti from '../lottie/animation_lllckjb2.json';
 
-const ButtonComponent = () => {
+const ButtonComponent = ({
+    isAboutMeOpen,
+    setIsAboutMeOpen,
+    isPortfolioOpen,
+    setIsPortfolioOpen,
+  }) => {
   const [buttonClicked, setButtonClicked] = useState(false);
 
   const triggerAboutMe = () => {
-    setButtonClicked(true)
-    if(!buttonClicked) {
-    } else {
-      setButtonClicked(false)
-    }
+    setButtonClicked(!buttonClicked)
+    setIsAboutMeOpen(!isAboutMeOpen)
   }
   const triggerPortfolio = () => {
-    setButtonClicked(true)
-    if(!buttonClicked) {
-    } else {
-      setButtonClicked(false)
-    }
+    setButtonClicked(!buttonClicked)
+    setIsPortfolioOpen(!isPortfolioOpen)
   }
 
   return (

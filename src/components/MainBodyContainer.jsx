@@ -1,13 +1,35 @@
-import React from 'react'
+import {React, useState} from 'react'
 import profilePic from '../assets/profile_pic.jpeg';
+import AboutMeModalComponent from './AboutMeModalComponent';
 import ButtonComponent from './ButtonComponent';
+import PortfolioModalComponent from './PortfolioModalComponent';
 import SocialIconComponent from './SocialIconComponent';
 
 const MainBodyContainer = () => {
+  const [isAboutMeOpen, setIsAboutMeOpen] = useState(false)
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false)
+
+  const closeModals = () => {
+    setIsAboutMeOpen(false)
+    setIsPortfolioOpen(false)
+  }
+
   return (
     <div className='main-body-container'>
+      <div
+        onClick={closeModals}
+        className={`menu-background ${isAboutMeOpen || isPortfolioOpen ?
+        'active-menu-background'
+        :
+        ''
+      }`}>
+      
+      </div>
       <div className='left-container'>
-        LEFT
+        <AboutMeModalComponent 
+          isAboutMeOpen={isAboutMeOpen}
+          setIsAboutMeOpen={setIsAboutMeOpen}
+        />
       </div>
       <div className='mid-container'>
         <img
@@ -24,14 +46,22 @@ const MainBodyContainer = () => {
           FULL STACK SOFTWARE ENGINEER
         </h1>
         <div className='btn-container'>
-          <ButtonComponent />
+          <ButtonComponent 
+            isAboutMeOpen={isAboutMeOpen}
+            setIsAboutMeOpen={setIsAboutMeOpen}
+            isPortfolioOpen={isPortfolioOpen}
+            setIsPortfolioOpen={setIsPortfolioOpen}
+          />
         </div>
         <div className='icon-container'>
           <SocialIconComponent />
         </div>
       </div>
       <div className='right-container'>
-        RIGHT
+        <PortfolioModalComponent
+          isPortfolioOpen={isPortfolioOpen}
+          setIsPortfolioOpen={setIsPortfolioOpen}
+        />
       </div>
     </div>
   )
