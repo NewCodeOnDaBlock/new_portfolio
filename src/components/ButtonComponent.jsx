@@ -1,6 +1,8 @@
 import {React, useState} from 'react'
 import Lottie from "lottie-react";
 import Confetti from '../lottie/animation_lllckjb2.json';
+import { motion } from "framer-motion"
+
 
 const ButtonComponent = ({
     isAboutMeOpen,
@@ -25,8 +27,24 @@ const ButtonComponent = ({
         <Lottie loop={false} animationData={Confetti} className='about-confetti'/>
         : ''
       }
-      <button onClick={triggerAboutMe}>ABOUT</button>
-      <button onClick={triggerPortfolio}>PORTFOLIO</button>
+    <motion.button 
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      animate={{
+        scale: [1, 2, 1, 1, 1],
+        rotate: [0, 0, 250, 250, 0],
+      }}
+      onClick={triggerAboutMe}
+      >ABOUT</motion.button>
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      animate={{
+        scale: [1, 2, 1, 1, 1],
+        rotate: [0, 0, 250, 250, 0],
+      }}
+      onClick={triggerPortfolio}
+      >PORTFOLIO</motion.button>
     </div>
   )
 }

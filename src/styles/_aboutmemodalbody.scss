@@ -12,3 +12,29 @@
   font-weight: 200;
   font-size: 14px;
 }
+
+.framework-container{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.framework-icon{
+  width: 60px;
+  height: 60px;
+}
+
+.framework-icon-container{
+  width: 90px;
+  height: 90px;
+  display: flex;
+  border: none;
+  border-radius: 20px;
+  justify-content: center;
+  margin: 5px;
+  align-items: center;
+  box-shadow: 1px 1px 20px rgb(220, 220, 220);
+}
+

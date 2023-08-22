@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReact, faVuejs, faHtml5, faCss3 } from "@fortawesome/free-brands-svg-icons"
 
 const AboutMeModalBody = () => {
   return (
@@ -20,6 +22,43 @@ const AboutMeModalBody = () => {
           <br></br>
             Raden Mantuano
         </p>
+      </div>
+      <div>
+        <h3 style={{marginTop: '10px', color: 'lightgrey'}}>Technologies Used</h3>
+      </div>
+      <div className='framework-container'  style={{marginTop: '20px'}}>
+        <div className='framework-icon-container'>
+          <FontAwesomeIcon
+            className='framework-icon'
+            icon={faReact}
+            size="lg"
+            color="lightgrey"
+          />
+        </div>
+        <div className='framework-icon-container'>
+          <FontAwesomeIcon
+            className='framework-icon'
+            icon={faVuejs}
+            size="lg"
+            color="lightgrey"
+          />
+        </div>
+        <div className='framework-icon-container'>
+          <FontAwesomeIcon
+            className='framework-icon'
+            icon={faHtml5}
+            size="lg"
+            color="lightgrey"
+          />
+        </div>
+        <div className='framework-icon-container'>
+          <FontAwesomeIcon
+            className='framework-icon'
+            icon={faCss3}
+            size="lg"
+            color="lightgrey"
+          />
+        </div>
       </div>
     </div>
   )

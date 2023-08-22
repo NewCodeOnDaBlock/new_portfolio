@@ -1,13 +1,22 @@
-import {React, useState} from 'react'
+import {React, useState, useRef} from 'react'
 import profilePic from '../assets/profile_pic.jpeg';
 import AboutMeModalComponent from './AboutMeModalComponent';
 import ButtonComponent from './ButtonComponent';
 import PortfolioModalComponent from './PortfolioModalComponent';
 import SocialIconComponent from './SocialIconComponent';
+import { motion, useAnimationFrame } from "framer-motion"
+
+
 
 const MainBodyContainer = () => {
   const [isAboutMeOpen, setIsAboutMeOpen] = useState(false)
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false)
+  // const profilePicRef = useRef(null)
+
+  // useAnimationFrame((time, delta) => {
+  //   profilePicRef.current.style.transform = `rotateY(${time}deg)`
+  // })
+
 
   const closeModals = () => {
     setIsAboutMeOpen(false)
@@ -32,11 +41,22 @@ const MainBodyContainer = () => {
         />
       </div>
       <div className='mid-container'>
-        <img
-          className='profile-pic'
-          src={profilePic}
-          alt='profile-pic'
-        />
+        <div className='profile-pic-container'>
+          <motion.img
+            drag
+            dragConstraints={{
+              top: -50,
+              left: -50,
+              right: 50,
+              bottom: 50,
+            }}
+            className='profile-pic'
+            // ref={profilePicRef}
+            src={profilePic}
+            alt='profile-pic'
+            style={{cursor: 'pointer'}}
+          />
+        </div>
         <h1 style={{
             textAlign: 'center',
             color: 'lightslategrey',

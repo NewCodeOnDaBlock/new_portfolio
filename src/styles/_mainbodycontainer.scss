@@ -11,13 +11,25 @@
   justify-content: center;
 }
 
+
+.profile-pic-container {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-bottom: 30px;
+  box-shadow: inset -1px -1px 50px rgb(182, 182, 182);
+}
+
 .profile-pic{
-  width: 150px;
-  height: 150px;
+  width: 145px;
+  height: 145px;
   border-radius: 50%;
   border: none;
   box-shadow: 1px 1px 50px rgb(182, 182, 182);
-  margin-bottom: 30px;
 }
 
 .icon-container{
