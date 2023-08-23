@@ -5,12 +5,14 @@ import ButtonComponent from './ButtonComponent';
 import PortfolioModalComponent from './PortfolioModalComponent';
 import SocialIconComponent from './SocialIconComponent';
 import { motion } from "framer-motion"
-
+import Typewriter from 'typewriter-effect'
 
 
 const MainBodyContainer = () => {
   const [isAboutMeOpen, setIsAboutMeOpen] = useState(false)
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false)
+
+ 
 
 
   const closeModals = () => {
@@ -58,22 +60,33 @@ const MainBodyContainer = () => {
             style={{cursor: 'pointer'}}
           />
         </div>
-        <motion.h1
-          transition={{ type: "spring", stiffness: 100 }}
-          initial={{scale: 0}}
-          animate={{
-            x: 0, scale: 1,
-            ease: "linear",
-            duration: 5,
-          }}
+        <h1
           style={{
             textAlign: 'center',
             color: 'lightslategrey',
-            fontSize: '18px',
-            fontWeight: '400'
+            fontSize: '16px',
+            fontWeight: '300'
           }}>
-          FULL STACK SOFTWARE ENGINEER
-        </motion.h1>
+        <Typewriter 
+          onInit={(typewriter) => {
+            typewriter
+            .typeString('HELLO...')
+            .pauseFor(1000)
+            .typeString('<span></span>')
+            .typeString("MY NAME IS RADEN.")
+            .start();
+          }}
+        />
+        <br></br>
+        <Typewriter 
+          onInit={(typewriter) => {
+            typewriter
+            .pauseFor(5000)
+            .typeString("FULL STACK SOFTWARE DEVELOPER AT YOUR SERVICE!")
+            .start();
+          }}
+        />
+        </h1>
         <div className='btn-container'>
           <ButtonComponent 
             isAboutMeOpen={isAboutMeOpen}
