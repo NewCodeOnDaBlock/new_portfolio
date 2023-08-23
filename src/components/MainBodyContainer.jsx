@@ -58,14 +58,22 @@ const MainBodyContainer = () => {
             style={{cursor: 'pointer'}}
           />
         </div>
-        <h1 style={{
+        <motion.h1
+          transition={{ type: "spring", stiffness: 100 }}
+          initial={{scale: 0}}
+          animate={{
+            x: 0, scale: 1,
+            ease: "linear",
+            duration: 5,
+          }}
+          style={{
             textAlign: 'center',
             color: 'lightslategrey',
             fontSize: '18px',
             fontWeight: '400'
           }}>
           FULL STACK SOFTWARE ENGINEER
-        </h1>
+        </motion.h1>
         <div className='btn-container'>
           <ButtonComponent 
             isAboutMeOpen={isAboutMeOpen}
