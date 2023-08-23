@@ -45,12 +45,12 @@ const MainBodyContainer = () => {
               right: 50,
               bottom: 50,
             }}
-            transition={{ type: "spring", stiffness: 1000 }}
+            transition={{ type: "spring", stiffness: 100 }}
+            initial={{scale: 0}}
             animate={{
-              x: 0,
-              y: -2,
+              x: 0, scale: 1,
               ease: "linear",
-              duration: 1,
+              duration: 5,
             }}
             className='profile-pic'
             src={profilePic}

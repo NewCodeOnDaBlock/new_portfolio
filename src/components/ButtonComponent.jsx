@@ -30,22 +30,24 @@ const ButtonComponent = ({
     <motion.button 
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
+      transition={{ type: "spring", stiffness: 100 }}
+      initial={{scale: 0}}
       animate={{
+        x: 0, scale: 1,
         ease: "linear",
         duration: 1,
-        scale: [1, 2, 1, 1, 1],
-        rotate: [0, 0, 100, 200, 0],
       }}
       onClick={triggerAboutMe}
       >ABOUT</motion.button>
     <motion.button
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
+      transition={{ type: "spring", stiffness: 100 }}
+      initial={{scale: 0}}
       animate={{
+        x: 0, scale: 1,
         ease: "linear",
         duration: 1,
-        scale: [1, 2, 1, 1, 1],
-        rotate: [0, 0, 100, 200, 0],
       }}
       onClick={triggerPortfolio}
       >PORTFOLIO</motion.button>
