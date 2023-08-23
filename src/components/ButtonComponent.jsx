@@ -31,8 +31,10 @@ const ButtonComponent = ({
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       animate={{
+        ease: "linear",
+        duration: 1,
         scale: [1, 2, 1, 1, 1],
-        rotate: [0, 0, 100, 250, 0],
+        rotate: [0, 0, 100, 200, 0],
       }}
       onClick={triggerAboutMe}
       >ABOUT</motion.button>
@@ -40,8 +42,10 @@ const ButtonComponent = ({
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       animate={{
+        ease: "linear",
+        duration: 1,
         scale: [1, 2, 1, 1, 1],
-        rotate: [0, 0, 100, 250, 0],
+        rotate: [0, 0, 100, 200, 0],
       }}
       onClick={triggerPortfolio}
       >PORTFOLIO</motion.button>
