@@ -7,7 +7,7 @@ const PortfolioModalBody = () => {
   return (
     <div className='portfolio-body-container'>
         <h1>My Portfolio</h1>
-            <div class="project-container">
+            <div className="project-container">
               <img className='portfolio-image' src={MEW} alt='mew'/>
                 <h3>
                   <a href="https://www.myetherwallet.com/" target="_blank" rel="noreferrer">
@@ -16,7 +16,7 @@ const PortfolioModalBody = () => {
                 </h3>
                 <p>VueJs | Web3js | EtherJs | SASS | TypeScript | </p>
             </div>          
-            <div class="project-container">
+            <div className="project-container">
                 <img
                   className='portfolio-image'
                   src={DonkOne}
