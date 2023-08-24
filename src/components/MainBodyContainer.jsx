@@ -6,13 +6,12 @@ import PortfolioModalComponent from './PortfolioModalComponent';
 import SocialIconComponent from './SocialIconComponent';
 import { motion } from "framer-motion"
 import Typewriter from 'typewriter-effect'
+import ParticlesComponent from './ParticlesComponent';
 
 
 const MainBodyContainer = () => {
   const [isAboutMeOpen, setIsAboutMeOpen] = useState(false)
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false)
-
- 
 
 
   const closeModals = () => {
@@ -22,6 +21,7 @@ const MainBodyContainer = () => {
 
   return (
     <div className='main-body-container'>
+      <ParticlesComponent />
       <div
         onClick={closeModals}
         className={`menu-background ${isAboutMeOpen || isPortfolioOpen ?
