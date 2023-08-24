@@ -10,6 +10,8 @@ const SocialIconComponent = () => {
       <a href="https://www.linkedin.com/in/reiraden/" target="_blank" rel="noreferrer">
         <motion.div
           className='icon-border'
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 100 }}
           initial={{scale: 0}}
           animate={{
@@ -30,13 +32,15 @@ const SocialIconComponent = () => {
       <a href="https://www.linkedin.com/in/reiraden/" target="_blank" rel="noreferrer">
         <motion.div
           className='icon-border'
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 100 }}
           initial={{scale: 0}}
           animate={{
             x: 0, scale: 1,
             ease: "linear",
             duration: 5,
-          }}
+          }}      
         >
           <FontAwesomeIcon
             className='icon'
@@ -49,6 +53,8 @@ const SocialIconComponent = () => {
       <a href="https://twitter.com/nucodeondablock" target="_blank" rel="noreferrer">
         <motion.div
           className='icon-border'
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 100 }}
           initial={{scale: 0}}
           animate={{
